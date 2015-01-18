@@ -1,6 +1,6 @@
 # HTML table paging plugin
 This is a simple jquery plugin to provide paging functionality to HTML tables.
-It shows an example how to write statefull plugins with jquery.ui's [widget factory](http://jqueryui.com/widget/) tool
+It shows an example how to write statefull plugins with jQuery UI's [widget factory](http://jqueryui.com/widget/) tool.
 
 ## Usage:
 `$(".tableClass").paging({limit:5});`
