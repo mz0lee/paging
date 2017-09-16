@@ -13,7 +13,8 @@
                 this.options.rowDisplayStyle = rows.css('display');
                 var nav = this._getNavBar();
                 this.element.after(nav);
-                this.showPage(0);
+                $(".paging-nav a[data-page='"+ this.options.activePage +"']").addClass('selected-page');
+                this.showPage(this.options.activePage);
             },
             _getNavBar: function() {
                 var rows = this.options.rows;
@@ -57,8 +58,8 @@
             },
             pageClickHandler: function(event) {
                 event.preventDefault();
-                $(event.target).siblings().attr('class', "");
-                $(event.target).attr('class', "selected-page");
+                $(event.target).siblings().removeClass('selected-page');
+                $(event.target).addClass("selected-page");
                 var pageNum = $(event.target).attr('data-page');
                 this.showPage(pageNum);
             },
@@ -75,6 +76,3 @@
         });
     });
 })(jQuery);
-
-
-
